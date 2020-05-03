@@ -3,7 +3,6 @@ from PIL import Image
 import numpy
 from numpy import asarray
 from numpy import savez_compressed
-from mtcnn import MTCNN
 from matplotlib import pyplot as plt
 from keras.models import load_model
 from sklearn.metrics import accuracy_score
