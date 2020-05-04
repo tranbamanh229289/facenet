@@ -37,14 +37,14 @@ def load_data(link ):
         Y.extend(label)
     return X,Y
 
-link_train ='C:/Users/ThinkKING/Downloads/VN_train/'
-link_test='C:/Users/ThinkKING/Downloads/VN_test/'
+link_train ='/home/face_id/Facenet/VN_train/'
+link_test='/home/face_id/Facenet/VN_test/'
 train_x ,train_y= load_data(link_train)
 test_x,test_y=load_data(link_test)
-savez_compressed('C:/Users/ThinkKING/Downloads/data.npz',train_x,train_y,test_x,test_y)
-data=numpy.load('C:/Users/ThinkKING/Downloads/data.npz')
+savez_compressed('/home/face_id/Facenet/data.npz',train_x,train_y,test_x,test_y)
+data=numpy.load('/home/face_id/Facenet/data.npz')
 train_x,train_y,test_x,test_y=data['arr_0'],data['arr_1'],data['arr_2'],data['arr_3']
-model = load_model('C:/Users/ThinkKING/Downloads/facenet_keras.h5')
+model = load_model('/home/face_id/Facenet/facenet_keras.h5')
 
 def get_embedding (model , face_pixels ):
     face_pixels = face_pixels.astype('float32')
@@ -65,9 +65,9 @@ for face_pixels in test_x:
 
 new_trainX = asarray(new_trainX)
 new_testX=asarray(new_testX)
-savez_compressed ('C:/Users/ThinkKING/Downloads/data1.npz',new_trainX,train_y,new_testX,test_y)
+savez_compressed ('/home/face_id/Facenet/data1.npz',new_trainX,train_y,new_testX,test_y)
 
-data= numpy.load('C:/Users/ThinkKING/Downloads/data1.npz')
+data= numpy.load('/home/face_id/Facenet/data1.npz')
 train_x= data['arr_0']
 train_y=data['arr_1']
 test_x=data['arr_2']
