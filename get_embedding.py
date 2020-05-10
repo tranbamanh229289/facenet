@@ -4,7 +4,9 @@ import numpy
 from numpy import asarray
 from numpy import savez_compressed
 from matplotlib import pyplot as plt
-from tensorflow.keras.models import load_model
+import tensorflow as tf
+from tensorflow import keras
+from keras import models.load_model
 
 data=numpy.load('/home/face_id/Facenet/data.npz')
 train_x,train_y,test_x,test_y=data['arr_0'],data['arr_1'],data['arr_2'],data['arr_3']
