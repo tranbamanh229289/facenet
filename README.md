@@ -4,5 +4,3 @@
 * Each person will have k photos. I divide 80% of the photos of each person into a train set, the rest become a test data set
 ## Code 
 * I use mtCNN model to dectect the face in every photos .Then I use the keras library to extract the features.Finally, I use the SVM algorithm to classify images from features. Use that model for the train data set.
-## Tutorial :
-* [link tutorial] (https://machinelearningmastery.com/how-to-develop-a-face-recognition-system-using-facenet-in-keras-and-an-svm-classifier/?fbclid=IwAR1dmbNbGkK2t61UlxYMVWeAnNTN2WcxTUni-QoDnwS5m1uX14-igi4DUx0 )
